@@ -1,0 +1,24 @@
+.navbar {
+  box-shadow: 4px 4px white;
+}
+
+.navbar-logo-nav {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 80px;
+}
+
+.nav-btn {
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  margin: 5px;
+  text-decoration: none;
+}
+
+.nav-btn:hover {
+  background-color: rgb(35, 35, 125);
+}

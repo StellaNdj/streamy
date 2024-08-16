@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+ @import './components/navbar.css';
+
+ html {
+  background-color: #00050d;
+  color: white
+ }
