@@ -14,6 +14,9 @@ gem "pg", "~> 1.1"
 # Devise for authentication
 gem "devise"
 
+# Dotenv
+gem 'dotenv-rails'
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 
