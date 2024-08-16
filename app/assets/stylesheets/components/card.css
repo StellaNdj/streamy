@@ -1,11 +1,12 @@
 .movies-grid {
   display: flex;
-  flex: 1;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
 .movie-card {
   border-radius: 25px;
+  max-width: 200px;
 }
 
 .movie-card > a > img {

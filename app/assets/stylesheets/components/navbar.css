@@ -21,4 +21,5 @@
 
 .nav-btn:hover {
   background-color: rgb(35, 35, 125);
+  font-weight: bold;
 }

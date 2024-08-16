@@ -18,5 +18,9 @@
 
  html {
   background-color: #00050d;
-  color: white
+  color: white;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
  }
