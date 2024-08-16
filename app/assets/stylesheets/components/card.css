@@ -1,0 +1,19 @@
+.movies-grid {
+  display: flex;
+  flex: 1;
+  gap: 10px;
+}
+
+.movie-card {
+  border-radius: 25px;
+}
+
+.movie-card > a > img {
+  height: 300px;
+  border-radius: 25px;
+}
+
+.movie-card > h3 > a {
+  text-decoration: none;
+  color: white;
+}

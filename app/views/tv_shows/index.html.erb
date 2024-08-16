@@ -1,4 +1,14 @@
 <h1>TvShows</h1>
-<% @tv_shows.each do |tv_show| %>
-  <%= tv_show.title %>
-<% end %>
+
+<div class='movies-grid'>
+  <% @tv_shows.each do |tv_show| %>
+    <div class='movie-card'>
+      <% if show.poster_path %>
+        <%= link_to tv_show_path(show) do %>
+          <%= image_tag "https://image.tmdb.org/t/p/w500#{show.poster_path}" %>
+        <% end %>
+      <% end %>
+      <h3><%= link_to show.title, tv_show_path(show) %></h3>
+    </div>
+  <% end %>
+</div>

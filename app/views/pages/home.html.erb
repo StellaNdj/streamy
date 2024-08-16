@@ -1,12 +1,31 @@
-<h1>Home</h1>
-
-
 
 <h2>Popular movies</h2>
-<% @popular_movies.each do |movie| %>
-  <%= movie.title %>
-<% end %>
+
+<div class='movies-grid'>
+  <% @popular_movies.each do |movie| %>
+    <div class='movie-card'>
+      <% if movie.poster_path %>
+        <%= link_to movie_path(movie) do %>
+          <%= image_tag "https://image.tmdb.org/t/p/w500#{movie.poster_path}" %>
+        <% end %>
+      <% end %>
+      <h3><%= link_to movie.title, movie_path(movie) %></h3>
+    </div>
+  <% end %>
+</div>
+
+
 <h2>Popular tv shows</h2>
-<% @popular_tv_shows.each do |show| %>
-  <%= show.title %>
-<% end %>
+
+<div class='movies-grid'>
+  <% @popular_tv_shows.each do |show| %>
+    <div class='movie-card'>
+      <% if show.poster_path %>
+        <%= link_to tv_show_path(show) do %>
+          <%= image_tag "https://image.tmdb.org/t/p/w500#{show.poster_path}" %>
+        <% end %>
+      <% end %>
+      <h3><%= link_to show.title, tv_show_path(show) %></h3>
+    </div>
+  <% end %>
+</div>
