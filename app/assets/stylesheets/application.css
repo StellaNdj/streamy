@@ -15,6 +15,7 @@
  */
  @import './components/navbar.css';
  @import './components/navbar.css';
+ @import './components/tv.css';
 
  html {
   background-color: #00050d;

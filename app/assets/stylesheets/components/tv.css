@@ -1,0 +1,9 @@
+.tv-show-view {
+  height: 30rem;
+  padding: 20px;
+}
+
+.tv-overview {
+  max-width: 500px;
+  font-size: 18px;
+}

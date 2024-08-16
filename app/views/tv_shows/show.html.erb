@@ -1,2 +1,7 @@
-<h1>TvShows#show</h1>
-<p>Find me in app/views/tv_shows/show.html.erb</p>
+<div style="background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url('https://image.tmdb.org/t/p/w500<%= @tv_show.poster_path %>');" class="tv-show-view">
+  <h1><%= @tv_show.title %></h1>
+  <p class='tv-overview'><%= @tv_show.overview %></p>
+  <p><%= @tv_show.duration %> min</p>
+  <p><%= @tv_show.release_date %><%= @tv_show.rating %></p>
+  <p><%= @tv_show.category %></p>
+</div>
