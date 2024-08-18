@@ -9,12 +9,23 @@
   max-width: 200px;
 }
 
+
 .movie-card > a > img {
   height: 300px;
   border-radius: 25px;
 }
 
-.movie-card > h3 > a {
+.movie-card > h3 > a, .home-movie-card > h3 > a {
   text-decoration: none;
   color: white;
+}
+
+.home-movie-card {
+  border-radius: 25px;
+  max-width: 270px;
+}
+
+.home-movie-card > a > img {
+  height: 400px;
+  border-radius: 25px;
 }

@@ -1,2 +1,7 @@
-<h1>Movies#show</h1>
-<p>Find me in app/views/movies/show.html.erb</p>
+<div style="background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url('https://image.tmdb.org/t/p/w500<%= @movie.poster_path %>');" class="tv-show-view">
+  <h1><%= @movie.title %></h1>
+  <p class='tv-overview'><%= @movie.overview %></p>
+  <p><%= @movie.duration %> min</p>
+  <p><%= @movie.release_date %>-<%= @movie.rating %></p>
+  <p><%= @movie.category %></p>
+</div>

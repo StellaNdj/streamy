@@ -3,7 +3,7 @@
 
 <div class='movies-grid'>
   <% @popular_movies.each do |movie| %>
-    <div class='movie-card'>
+    <div class='home-movie-card'>
       <% if movie.poster_path %>
         <%= link_to movie_path(movie) do %>
           <%= image_tag "https://image.tmdb.org/t/p/w500#{movie.poster_path}" %>
@@ -19,7 +19,7 @@
 
 <div class='movies-grid'>
   <% @popular_tv_shows.each do |show| %>
-    <div class='movie-card'>
+    <div class='home-movie-card'>
       <% if show.poster_path %>
         <%= link_to tv_show_path(show) do %>
           <%= image_tag "https://image.tmdb.org/t/p/w500#{show.poster_path}" %>
