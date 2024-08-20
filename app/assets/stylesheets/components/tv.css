@@ -6,11 +6,12 @@
 .tv-overview {
   max-width: 600px;
   font-size: 18px;
+  font-family: arial;
 }
 
 .play-btn {
-  background-color: grey;
-  padding: 10px;
+  background-color: #8080808c;
+  padding: 15px;
   color: white;
   border-radius: 10px;
   font-size: 20px;
@@ -24,11 +25,25 @@
 }
 
 .icons-btn {
-  background-color: grey;
+  background-color: #8080808c;
   padding: 10px;
   color: white;
   border-radius: 50%;
-  font-size: 20px;
+  font-size: 25px;
   border: none;
   font-weight: bold;
+}
+
+.ms-content {
+  margin-top: 100px;
+}
+
+.ms-infos, .ms-genres {
+  color: #999;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.ms-infos > span {
+  margin-right: 10px;
 }
