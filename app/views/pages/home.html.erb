@@ -6,16 +6,26 @@
 <h2>Popular movies</h2>
 
 <div class='movies-grid'>
-  <% @popular_movies.each do |movie| %>
-    <div class='home-movie-card'>
-      <% if movie.poster_path %>
-        <%= link_to movie_path(movie) do %>
-          <%= image_tag "https://image.tmdb.org/t/p/w500#{movie.poster_path}" %>
-        <% end %>
+  <div class="swiper-container" data-controller="swiper">
+    <div class="swiper-wrapper">
+      <% @popular_movies.each do |movie| %>
+        <div class="swiper-slider">
+          <div class='home-movie-card'>
+            <% if movie.poster_path %>
+              <%= link_to movie_path(movie) do %>
+                <%= image_tag "https://image.tmdb.org/t/p/w500#{movie.poster_path}" %>
+              <% end %>
+            <% end %>
+            <h3><%= link_to movie.title, movie_path(movie) %></h3>
+          </div>
+        </div>
       <% end %>
-      <h3><%= link_to movie.title, movie_path(movie) %></h3>
     </div>
-  <% end %>
+  </div>
+
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+  
 </div>
 
 

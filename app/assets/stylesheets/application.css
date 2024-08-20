@@ -18,6 +18,7 @@
  @import './components/tv.css';
  @import "font-awesome";
  @import "font-awesome-sprockets";
+ @import './components/swiper.css';
 
  html {
   background-color: #00050d;

@@ -1,0 +1,15 @@
+.swiper-container {
+  position: relative;
+}
+
+.swiper-wrapper {
+  padding-bottom: 40px;
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next {
+  right: 0;
+}
