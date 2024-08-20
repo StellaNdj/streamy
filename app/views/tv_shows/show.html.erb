@@ -1,7 +1,20 @@
-<div style="background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url('https://image.tmdb.org/t/p/w500<%= @tv_show.poster_path %>');" class="tv-show-view">
-  <h1><%= @tv_show.title %></h1>
-  <p class='tv-overview'><%= @tv_show.overview %></p>
-  <p><%= @tv_show.duration %> min</p>
-  <p><%= @tv_show.release_date %><%= @tv_show.rating %></p>
-  <p><%= @tv_show.category %></p>
+<div style="background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url('https://image.tmdb.org/t/p/w500<%= @tv_show.poster_path %>');" class="ms-show-view">
+  <div class='ms-content'>
+    <h1><%= @tv_show.title %></h1>
+    <p class='ms-overview'><%= @tv_show.overview %></p>
+
+    <p class='ms-infos'>
+      <span>IMDb <%= @tv_show.rating.round(1) %></span>
+      <span><%= @tv_show.duration %> min</span>
+      <span><%= @tv_show.release_date.strftime("%Y")%></span>
+    </p>
+
+    <p class='ms-genres'><%= @tv_show.category.gsub(',', ' • ') %></p>
+
+    <div>
+      <button class='play-btn'><i class="fa fa-play"></i> Play</button>
+      <button class='icons-btn'><i class="fa fa-plus"></i></button>
+      <button class='icons-btn'><i class="fa fa-heart"></i></button>
+    </div>
+  </div>
 </div>

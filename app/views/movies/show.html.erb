@@ -1,7 +1,7 @@
-<div style="background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url('https://image.tmdb.org/t/p/w500<%= @movie.poster_path %>');" class="tv-show-view">
+<div style="background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url('https://image.tmdb.org/t/p/w500<%= @movie.poster_path %>');" class="ms-show-view">
   <div class='ms-content'>
     <h1><%= @movie.title %></h1>
-    <p class='tv-overview'><%= @movie.overview %></p>
+    <p class='ms-overview'><%= @movie.overview %></p>
 
     <p class='ms-infos'>
       <span>IMDb <%= @movie.rating.round(1) %></span>

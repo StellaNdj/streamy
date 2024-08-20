@@ -1,16 +1,16 @@
-.tv-show-view {
+.ms-show-view {
   height: 30rem;
   padding: 20px;
 }
 
-.tv-overview {
+.ms-overview {
   max-width: 600px;
   font-size: 18px;
   font-family: arial;
 }
 
 .play-btn {
-  background-color: #8080808c;
+  background-color: #393d43ed;
   padding: 15px;
   color: white;
   border-radius: 10px;
@@ -21,11 +21,11 @@
 
 .play-btn:hover, .icons-btn:hover {
   background-color: rgb(16, 59, 97);
-  color: black;
+  transform: scale(1.5rem)
 }
 
 .icons-btn {
-  background-color: #8080808c;
+  background-color: #393d43ed;
   padding: 10px;
   color: white;
   border-radius: 50%;
