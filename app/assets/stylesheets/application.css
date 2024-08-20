@@ -16,6 +16,8 @@
  @import './components/navbar.css';
  @import './components/navbar.css';
  @import './components/tv.css';
+ @import "font-awesome";
+ @import "font-awesome-sprockets";
 
  html {
   background-color: #00050d;

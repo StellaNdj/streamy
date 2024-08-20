@@ -2,6 +2,12 @@
   <h1><%= @movie.title %></h1>
   <p class='tv-overview'><%= @movie.overview %></p>
   <p><%= @movie.duration %> min</p>
-  <p><%= @movie.release_date %>-<%= @movie.rating %></p>
+  <p><%= @movie.release_date.strftime("%Y")%> - IMDb <%= @movie.rating.round(1) %></p>
   <p><%= @movie.category %></p>
+
+  <div>
+    <button class='play-btn'><i class="fa fa-play"></i>Play</button>
+    <button class='icons-btn'><i class="fa fa-plus"></i></button>
+    <button class='icons-btn'><i class="fa fa-heart"></i></button>
+  </div>
 </div>
