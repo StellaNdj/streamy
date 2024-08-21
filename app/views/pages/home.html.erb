@@ -1,35 +1,52 @@
-<video controls muted loop width="100%">
-  <source src="<%= @video_url %>" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<div>
+  <video controls muted loop width="100%">
+    <source src="<%= @video_url %>" type="video/mp4">
+  </video>
+</div>
 
 <h2>Popular movies</h2>
 
-<div class='movies-grid'>
-  <% @popular_movies.each do |movie| %>
-    <div class='home-movie-card'>
-      <% if movie.poster_path %>
-        <%= link_to movie_path(movie) do %>
-          <%= image_tag "https://image.tmdb.org/t/p/w500#{movie.poster_path}" %>
-        <% end %>
-      <% end %>
-      <h3><%= link_to movie.title, movie_path(movie) %></h3>
-    </div>
-  <% end %>
+<div class="swiper-container" data-controller="swiper">
+  <div class="swiper-wrapper">
+    <% @popular_movies.each do |movie| %>
+      <div class='swiper-slide' >
+        <div class='home-movie-card'>
+          <% if movie.poster_path %>
+            <%= link_to movie_path(movie) do %>
+              <%= image_tag "https://image.tmdb.org/t/p/w500#{movie.poster_path}" %>
+            <% end %>
+          <% end %>
+          <h3><%= link_to movie.title, movie_path(movie) %></h3>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
 </div>
 
 
 <h2>Popular tv shows</h2>
 
-<div class='movies-grid'>
-  <% @popular_tv_shows.each do |show| %>
-    <div class='home-movie-card'>
-      <% if show.poster_path %>
-        <%= link_to tv_show_path(show) do %>
-          <%= image_tag "https://image.tmdb.org/t/p/w500#{show.poster_path}" %>
-        <% end %>
-      <% end %>
-      <h3><%= link_to show.title, tv_show_path(show) %></h3>
-    </div>
-  <% end %>
+
+
+
+<div class="swiper-container" data-controller="swiper">
+  <div class="swiper-wrapper">
+    <% @popular_tv_shows.each do |show| %>
+      <div class='swiper-slide'>
+        <div class='home-movie-card'>
+          <% if show.poster_path %>
+            <%= link_to tv_show_path(show) do %>
+              <%= image_tag "https://image.tmdb.org/t/p/w500#{show.poster_path}" %>
+            <% end %>
+          <% end %>
+          <h3><%= link_to show.title, tv_show_path(show) %></h3>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
 </div>
