@@ -2,14 +2,17 @@
   position: relative;
 }
 
-.swiper-wrapper {
-  padding-bottom: 40px;
+.swiper-container-wrapper {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
 }
 
-.swiper-button-prev {
-  left: 0;
+ .swiper-button-prev {
+  left: 10px;
+  z-index: 2;
 }
 
 .swiper-button-next {
-  right: 0;
+  right: 10px;
 }
