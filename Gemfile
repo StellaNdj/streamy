@@ -14,6 +14,9 @@ gem "pg", "~> 1.1"
 # Devise for authentication
 gem "devise"
 
+# AWS
+gem 'aws-sdk-s3', '~> 1.0'
+
 # Dotenv
 gem 'dotenv-rails'
 
