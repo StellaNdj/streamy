@@ -12,10 +12,13 @@ require './app/services/tmdb_client'
 
 tmdb_client = TmdbClient.new
 
-number_of_pages = 4
+number_of_pages = 10
 
 puts 'Clearing existing movie data...'
 Movie.destroy_all
+Genre.destroy_all
+Season.destroy_all
+Episode.destroy_all
 puts 'Existing movie data cleared.'
 puts 'Seeding movies...'
 
@@ -25,9 +28,12 @@ puts 'Seeding movies...'
 
     details = tmdb_client.fetch_movie_details(movie['id'])
     credits = tmdb_client.fetch_movie_credits(movie['id'])
-    genres = details['genres'].map { |genre| genre['name'] }.join(', ')
 
-    Movie.find_or_create_by(tmdb_id: movie['id']) do |m|
+    genres = details['genres'].map do |genre_data|
+      Genre.find_or_create_by(name: genre_data['name'])
+    end
+
+    movie_record = Movie.find_or_create_by(tmdb_id: movie['id']) do |m|
       m.title = movie['title']
       m.overview = movie['overview']
       m.release_date = movie['release_date']
@@ -35,9 +41,12 @@ puts 'Seeding movies...'
       m.duration = details['runtime']
       m.rating = details['vote_average']
       m.cast = credits['cast'].map { |c| c['name'] }.take(5).join(', ')
-      m.category = genres
+      m.category = genres.map(&:name).join(', ')
+      m.video_key = "anime.mp4"
     end
 
+    movie_record.genres = genres
+    puts movie_record.title
   end
 end
 
@@ -48,9 +57,12 @@ puts "Seeding TV Shows..."
   tv_shows_data['results'].each do |tv_show|
     details = tmdb_client.fetch_tv_show_details(tv_show['id'])
     credits = tmdb_client.fetch_tv_show_credits(tv_show['id'])
-    genres = details['genres'].map { |genre| genre['name'] }.join(', ')
 
-    TvShow.find_or_create_by(tmdb_id: tv_show['id']) do |tv|
+    genres = details['genres'].map do |genre_data|
+      Genre.find_or_create_by(name: genre_data['name'])
+    end
+
+    tv_show_record = TvShow.find_or_create_by(tmdb_id: tv_show['id']) do |tv|
       tv.title = tv_show['name']
       tv.overview = tv_show['overview']
       tv.release_date = tv_show['first_air_date']
@@ -58,8 +70,12 @@ puts "Seeding TV Shows..."
       tv.duration = details['episode_run_time'].first
       tv.rating = details['vote_average']
       tv.cast = credits['cast'].map { |c| c['name'] }.take(5).join(', ')
-      tv.category = genres
+      tv.category = genres.map(&:name).join(', ')
+      tv.video_key = "anime.mp4"
     end
+    
+    tv_show_record.genres = genres
+    puts tv_show_record.title
   end
 end
 
