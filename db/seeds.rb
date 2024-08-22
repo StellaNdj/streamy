@@ -12,13 +12,16 @@ require './app/services/tmdb_client'
 
 tmdb_client = TmdbClient.new
 
-number_of_pages = 10
+number_of_pages = 20
 
 puts 'Clearing existing movie data...'
-Movie.destroy_all
+TvShowGenre.destroy_all
+MovieGenre.destroy_all
 Genre.destroy_all
 Season.destroy_all
 Episode.destroy_all
+Movie.destroy_all
+TvShow.destroy_all
 puts 'Existing movie data cleared.'
 puts 'Seeding movies...'
 
@@ -73,7 +76,7 @@ puts "Seeding TV Shows..."
       tv.category = genres.map(&:name).join(', ')
       tv.video_key = "anime.mp4"
     end
-    
+
     tv_show_record.genres = genres
     puts tv_show_record.title
   end
