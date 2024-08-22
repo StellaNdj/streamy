@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tv_show: one
+  season_number: 1
+  title: MyString
+  overview: MyText
+  release_date: 2024-08-22
+
+two:
+  tv_show: two
+  season_number: 1
+  title: MyString
+  overview: MyText
+  release_date: 2024-08-22
