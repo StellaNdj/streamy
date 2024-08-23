@@ -1,14 +1,23 @@
-<h1>TV Shows</h1>
-
-<div class='movies-grid'>
-  <% @tv_shows.each do |tv_show| %>
-    <div class='movie-card'>
-      <% if tv_show.poster_path %>
-        <%= link_to tv_show_path(tv_show) do %>
-          <%= image_tag "https://image.tmdb.org/t/p/w500#{tv_show.poster_path}" %>
+<% @tv_shows_by_genre.each do |genre, tv_shows| %>
+  <% if tv_shows.any? %>
+    <h2><%= genre %><%= link_to 'See more', genre_tv_shows_path(genre: genre) %></h2>
+    <div class="swiper-container" data-controller="swiper">
+      <div class="swiper-wrapper">
+        <% tv_shows.each do |tv_show| %>
+          <div class='swiper-slide'>
+            <div class='movie-card'>
+              <% if tv_show.poster_path %>
+                <%= link_to tv_show_path(tv_show) do %>
+                  <%= image_tag "https://image.tmdb.org/t/p/w500#{tv_show.poster_path}" %>
+                <% end %>
+              <% end %>
+              <h3><%= link_to tv_show.title, tv_show_path(tv_show) %></h3>
+            </div>
+          </div>
         <% end %>
-      <% end %>
-      <h3><%= link_to tv_show.title, tv_show_path(tv_show) %></h3>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
   <% end %>
-</div>
+<% end %>
