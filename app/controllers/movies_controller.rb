@@ -17,4 +17,10 @@ class MoviesController < ApplicationController
   def action_movies
     @action_movies = Movie.joins(:genres).where(genres: { name: 'Action' })
   end
+
+  def genre_movies
+    genre_name = params[:genre]
+    @genre = Genre.find_by(name: genre_name)
+    @movies = @genre ? @genre.movies : []
+  end
 end

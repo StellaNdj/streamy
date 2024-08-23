@@ -1,0 +1,15 @@
+<h1><%= @genre.name %> Movies</h1>
+<% if @movies.any? %>
+  <div class='movies-grid'>
+    <% @movies.each do |movie| %>
+      <div class='movie-card'>
+        <% if movie.poster_path %>
+          <%= link_to movie_path(movie) do %>
+            <%= image_tag "https://image.tmdb.org/t/p/w500#{movie.poster_path}" %>
+          <% end %>
+        <% end %>
+        <h3><%= link_to movie.title, movie_path(movie) %></h3>
+      </div>
+    <% end %>
+  </div>
+<% end %>
