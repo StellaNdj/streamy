@@ -1,14 +1,16 @@
 <% @movies_by_genre.each do |genre, movies| %>
   <% if movies.any? %>
-    <h2><%= genre %><%= link_to 'See more', genre_movies_path(genre: genre) %></h2>
+    <h2><%= genre %> <%= link_to 'See more >', genre_movies_path(genre: genre) %></h2>
     <div class="swiper-container" data-controller="swiper">
       <div class="swiper-wrapper">
         <% movies.each do |movie| %>
           <div class='swiper-slide'>
-            <div class='movie-card'>
+            <div class='movie-card' data-controller="poster">
               <% if movie.poster_path %>
                 <%= link_to movie_path(movie) do %>
-                  <%= image_tag "https://image.tmdb.org/t/p/w500#{movie.poster_path}" %>
+                  <div class='poster-wrapper' data-poster-target="wrapper">
+                    <%= image_tag "https://image.tmdb.org/t/p/w500#{movie.poster_path}", class: "poster-image", data: { poster_target: "image" } %>
+                  </div>
                 <% end %>
               <% end %>
               <h3><%= link_to movie.title, movie_path(movie) %></h3>
