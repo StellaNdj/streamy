@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'pages#home'
+  get 'movies/action_movies', to: 'movies#action_movies'
   resources :movies, only: [:index, :show]
   resources :tv_shows, only: [:index, :show]
   devise_for :users
