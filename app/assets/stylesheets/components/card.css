@@ -12,7 +12,7 @@
 
 .movie-card > a > img {
   height: 300px;
-  border-radius: 25px;
+  border-radius: 10px;
 }
 
 .movie-card > h3 > a, .home-movie-card > h3 > a {
@@ -21,30 +21,41 @@
 }
 
 .home-movie-card {
-  border-radius: 25px;
+  border-radius: 10px;
   max-width: 270px;
 }
 
 .home-movie-card > a > img {
   height: 400px;
-  border-radius: 25px;
+  border-radius: 10px;
 }
 
-.poster-wrapper {
+/* .poster-wrapper {
   width: 100%;
   padding-left: 25%;
   padding-right: 25%;
-  background-color: #333;
+  background-color: #ede8e8c2;
   position: relative;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 25px;
+  border-radius: 10px;
 }
 
 .poster-image {
   max-height: 100%;
   max-width: 65%;
   object-fit: cover;
+} */
+
+.more a {
+  text-decoration: none;
+  color: white;
+  font-weight: lighter;
+  font-size: 16px;
+}
+
+.more > i {
+  font-size: 16px;
 }
