@@ -13,7 +13,8 @@ export default class extends Controller {
 
   handleScroll() {
     if(window.scrollY > 0) {
-      this.navTarget.style.backgroundColor = 'rgba(10, 41, 68, 0.86)';
+      this.navTarget.style.backgroundColor = 'rgba(10, 41, 68, 0.8)';
+      this.navTarget.style.backdropFilter = 'blur(10px)';
     } else {
       this.navTarget.style.backgroundColor = '#00050d';
     }
