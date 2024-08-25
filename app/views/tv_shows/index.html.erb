@@ -1,7 +1,14 @@
 <% @tv_shows_by_genre.each do |genre, tv_shows| %>
   <% if tv_shows.any? %>
-    <h2><%= genre %> <%= link_to 'See more >', genre_tv_shows_path(genre: genre) %></h2>
-    <div class="swiper-container" data-controller="swiper">
+    <h2>
+      <%= genre %>
+      <span class='more'>
+        <%= link_to 'See more', genre_tv_shows_path(genre: genre) %>
+        <i class="fa fa-chevron-right"></i>
+      </span>
+    </h2>
+
+    <div class="swiper-container" data-controller="swiper" data-slides-per-view="6">
       <div class="swiper-wrapper">
         <% tv_shows.each do |tv_show| %>
           <div class='swiper-slide'>
