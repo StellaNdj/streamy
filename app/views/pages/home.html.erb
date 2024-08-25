@@ -6,7 +6,7 @@
 
 <h2>Popular movies</h2>
 
-<div class="swiper-container" data-controller="swiper">
+<div class="swiper-container" data-controller="swiper" data-slides-per-view="4">
   <div class="swiper-wrapper">
     <% @popular_movies.each do |movie| %>
       <div class='swiper-slide' >
@@ -32,7 +32,7 @@
 
 
 
-<div class="swiper-container" data-controller="swiper">
+<div class="swiper-container" data-controller="swiper" data-slides-per-view="4">
   <div class="swiper-wrapper">
     <% @popular_tv_shows.each do |show| %>
       <div class='swiper-slide'>
