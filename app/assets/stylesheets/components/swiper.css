@@ -1,9 +1,8 @@
-.swiper-container {
+/* .swiper-container {
   position: relative;
-}
+} */
 
 .swiper-container-wrapper {
-    position: relative;
     width: 100%;
     margin-top: 20px;
 }
@@ -15,4 +14,14 @@
 
 .swiper-button-next {
   right: 10px;
+}
+
+.swiper-slide {
+  position: relative;
+  z-index: 1;
+}
+
+.swiper-container, .swiper-wrapper {
+  position: relative;
+  overflow: visible;
 }

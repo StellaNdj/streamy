@@ -1,3 +1,4 @@
+/* Movies and tv shows cards & grid */
 .movies-grid {
   display: flex;
   flex-wrap: wrap;
@@ -16,20 +17,74 @@
   border-radius: 10px;
 }
 
-.movie-card > h3 > a, .home-movie-card > h3 > a {
+.movie-card > h3 > a,
+.home-movie-card > h3 > a,
+.movie-card > h4 > a,
+.home-movie-card > h4 > a,
+.movie-card-infos > h4 > a {
   text-decoration: none;
   color: white;
 }
 
+/* Homepage cards */
+.home-container {
+  margin: 10px 30px;
+}
+
 .home-movie-card {
   border-radius: 10px;
-  max-width: 270px;
+  max-width: 240px;
+  background-color: #00050d;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
 }
 
 .home-movie-card > a > img {
   height: 360px;
   width: 240px;
   border-radius: 10px;
+}
+
+.movie-card-infos {
+  display: none;
+  transition: opacity 0.3s ease;
+}
+
+.home-movie-card:hover {
+  transform: scale(1.1);
+  position: absolute;
+  z-index: 1000;
+  border: 1px solid white;
+}
+
+.home-movie-card:hover .movie-card-infos {
+  display: block;
+  background-color: #00050d;
+  padding: 0px 10px;
+  transform: none;
+  z-index: 1100;
+}
+
+.movie-card-infos p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  margin: 0;
+  max-height: 4.5em;
+}
+
+
+.home-play-btn {
+  background-color: #393d43ed;
+  padding: 15px;
+  color: white;
+  border-radius: 10px;
+  font-size: 20px;
+  border: none;
+  font-weight: bold;
+  width: 100%;
 }
 
 .more a {
@@ -41,8 +96,4 @@
 
 .more > i {
   font-size: 16px;
-}
-
-.home-container {
-  margin: 10px 30px;
 }

@@ -11,7 +11,13 @@
                 <%= image_tag "https://image.tmdb.org/t/p/w500#{movie.poster_path}" %>
               <% end %>
             <% end %>
-            <h3><%= link_to movie.title, movie_path(movie) %></h3>
+            <div class='movie-card-infos'>
+              <h4><%= link_to movie.title, movie_path(movie) %></h4>
+              <button class='home-play-btn'><i class="fa fa-play"></i> Play</button>
+              <button class='icons-btn'><i class="fa fa-plus"></i></button>
+              <p><%= movie.release_date.strftime("%Y")%></p>
+              <p><%= movie.overview %></p>
+            </div>
           </div>
         </div>
       <% end %>
@@ -34,7 +40,8 @@
                 <%= image_tag "https://image.tmdb.org/t/p/w500#{show.poster_path}" %>
               <% end %>
             <% end %>
-            <h3><%= link_to show.title, tv_show_path(show) %></h3>
+            <h4><%= link_to show.title, tv_show_path(show) %></h4>
+
           </div>
         </div>
       <% end %>

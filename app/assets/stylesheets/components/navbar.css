@@ -4,7 +4,7 @@
   position: sticky;
   top: 0;
   margin: 0 10px;
-  padding: 0 10px;
+  padding: 2px 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -36,4 +36,13 @@
 
 .nav-btn:hover {
   background-color: rgb(45, 135, 213);
+}
+
+.nav-icon-book {
+  font-weight: lighter;
+}
+
+.navbar-login-search i {
+  font-size: 16px;
+  margin: 5px;
 }
