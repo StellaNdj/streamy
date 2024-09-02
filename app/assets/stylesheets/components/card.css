@@ -36,7 +36,8 @@
   max-width: 240px;
   background-color: #00050d;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
+  z-index: 1000;
+  border: 1px solid white;
 }
 
 .home-movie-card > a > img {
@@ -48,22 +49,26 @@
 .movie-card-infos {
   display: none;
   transition: opacity 0.3s ease;
+  padding: 15px;
 }
 
 .home-movie-card:hover {
   transform: scale(1.1);
   position: absolute;
-  z-index: 1000;
-  border: 1px solid white;
+  z-index: 2000;
 }
 
 .home-movie-card:hover .movie-card-infos {
   display: block;
   background-color: #00050d;
   padding: 0px 10px;
-  transform: none;
-  z-index: 1100;
 }
+
+.home-movie-card > a > img:hover {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
 
 .movie-card-infos p {
   display: -webkit-box;
@@ -71,7 +76,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-line-clamp: 3;
-  margin: 0;
+  margin-top: 10px;
   max-height: 4.5em;
 }
 
@@ -83,8 +88,23 @@
   border-radius: 10px;
   font-size: 20px;
   border: none;
-  font-weight: bold;
   width: 100%;
+}
+
+.home-icons-btn {
+  background-color: #393d43ed;
+  padding: 10px;
+  color: white;
+  border-radius: 50%;
+  font-size: 25px;
+  border: none;
+  margin: 5px 0;
+}
+
+.home-year {
+  color: #999;
+  font-weight: bold;
+  font-size: 14px;
 }
 
 .more a {
