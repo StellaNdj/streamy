@@ -36,7 +36,7 @@
   max-width: 240px;
   background-color: #00050d;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  z-index: 1000;
+  z-index: 1;
   border: 1px solid white;
 }
 
@@ -55,13 +55,13 @@
 .home-movie-card:hover {
   transform: scale(1.1);
   position: absolute;
-  z-index: 2000;
 }
 
 .home-movie-card:hover .movie-card-infos {
   display: block;
   background-color: #00050d;
-  padding: 0px 10px;
+  position: relative;
+  z-index: 2000 !important;
 }
 
 .home-movie-card > a > img:hover {
@@ -116,4 +116,26 @@
 
 .more > i {
   font-size: 16px;
+}
+
+/* Testing card */
+.card {
+  background-color: rgb(29, 127, 160);
+  color: white;
+  padding: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.card-info {
+  display: none;
+  padding: 15px;
+  background-color: white;
+  color: black;
+}
+
+.card:hover .card-info {
+  display: block;
+  position: absolute;
+  z-index: 1000 !important;
 }
