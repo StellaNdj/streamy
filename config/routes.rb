@@ -1,14 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  # Root paths for authenticated and unauthenticated users
-  authenticated :user do
-    root 'pages#home'
-  end
-
-  unauthenticated do
-    root 'devise/registrations#new', as: :unauthenticated_root
-  end
+  root 'pages#home'
 
   # Other routes
   get 'movies/genre/:genre', to: 'movies#genre_movies', as: 'genre_movies'
