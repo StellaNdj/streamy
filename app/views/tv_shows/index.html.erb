@@ -1,4 +1,4 @@
-<% @tv_shows_by_genre.each do |genre, tv_shows| %>
+<% @tv_shows_by_genre.each_with_index do |(genre, tv_shows), index| %>
   <% if tv_shows.any? %>
     <h2>
       <%= genre %>
@@ -8,7 +8,10 @@
       </span>
     </h2>
 
-    <div class="swiper-container" data-controller="swiper" data-slides-per-view="6">
+    <%# Calculate z-index %>
+    <% z_index = @tv_shows_by_genre.size - index %>
+
+    <div class="swiper-container" data-controller="swiper" data-slides-per-view="6" style="position: relative; z-index: <%= z_index %>;">
       <div class="swiper-wrapper">
         <% tv_shows.each do |tv_show| %>
           <div class='swiper-slide'>
@@ -18,7 +21,15 @@
                   <%= image_tag "https://image.tmdb.org/t/p/w500#{tv_show.poster_path}" %>
                 <% end %>
               <% end %>
-              <h3><%= link_to tv_show.title, tv_show_path(tv_show) %></h3>
+              <div class='movie-card-infos'>
+                <h3><%= link_to tv_show.title, tv_show_path(tv_show) %></h3>
+                <button class='home-play-btn'><i class="fa fa-play"></i> Play</button>
+                <button class='home-icons-btn'><i class="fa fa-plus"></i></button>
+                <% if tv_show.release_date? %>
+                  <p class="home-year"><%= tv_show.release_date.strftime("%Y")%></p>
+                <% end %>
+                <p><%= tv_show.overview %></p>
+              </div>
             </div>
           </div>
         <% end %>
