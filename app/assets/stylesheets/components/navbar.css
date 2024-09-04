@@ -21,6 +21,16 @@
   margin-right: 30px;
 }
 
+.user-logo {
+  width: 30px;
+  border: 5px solid black;
+}
+
+.user-logo:hover {
+  border: 5px solid white;
+  border-radius: 50%;
+}
+
 .nav-btn {
   border-radius: 10px;
   padding: 15px;
@@ -34,7 +44,8 @@
   background-color: rgb(30, 97, 154);
 }
 
-.nav-btn:hover {
+.nav-btn:hover,
+.nav-btn-menu:hover {
   background-color: rgb(45, 135, 213);
 }
 
@@ -42,7 +53,45 @@
   font-weight: lighter;
 }
 
+.navbar-login-search {
+  position: relative;
+}
+
 .navbar-login-search i {
   font-size: 16px;
   margin: 5px;
+}
+
+.nav-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: rgba(10, 41, 68, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.user-logo .nav-btn-menu {
+  display: block;
+}
+
+.nav-btn-menu {
+  width: 100%;
+  border-radius: 10px;
+  padding: 15px;
+  color: white;
+  margin: 5px;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.nav-menu p {
+  font-size: 14px;
+  color: #999;
+}
+
+.nav-menu ul {
+  list-style: none;
 }
