@@ -50,6 +50,8 @@
   display: none;
   transition: opacity 0.3s ease;
   padding: 15px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .home-movie-card:hover {
@@ -116,26 +118,4 @@
 
 .more > i {
   font-size: 16px;
-}
-
-/* Testing card */
-.card {
-  background-color: rgb(29, 127, 160);
-  color: white;
-  padding: 15px;
-  position: relative;
-  z-index: 1;
-}
-
-.card-info {
-  display: none;
-  padding: 15px;
-  background-color: white;
-  color: black;
-}
-
-.card:hover .card-info {
-  display: block;
-  position: absolute;
-  z-index: 1000 !important;
 }
