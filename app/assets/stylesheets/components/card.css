@@ -2,7 +2,7 @@
 .movies-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 30px;
 }
 
 .movie-card {
@@ -54,9 +54,7 @@
 }
 
 /* Homepage cards */
-.home-container {
-  margin: 10px 30px;
-}
+
 
 .home-movie-card {
   border-radius: 10px;
@@ -100,7 +98,7 @@
   display: block;
   background-color: #00050d;
   position: relative;
-  z-index: 2000 !important;
+  z-index: 2000;
 }
 
 .home-movie-card > a > img:hover,
