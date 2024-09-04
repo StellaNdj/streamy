@@ -19,6 +19,7 @@
  @import "font-awesome";
  @import "font-awesome-sprockets";
  @import './components/swiper.css';
+ @import './components/user_forms.css';
 
  html {
   background-color: #00050d;
