@@ -1,10 +1,21 @@
 Rails.application.routes.draw do
-  root 'pages#home'
+  devise_for :users
+
+  # Root paths for authenticated and unauthenticated users
+  authenticated :user do
+    root 'pages#home'
+  end
+
+  unauthenticated do
+    root 'devise/registrations#new', as: :unauthenticated_root
+  end
+
+  # Other routes
   get 'movies/genre/:genre', to: 'movies#genre_movies', as: 'genre_movies'
   get 'tv_shows/genre/:genre', to: 'tv_shows#genre_tv_shows', as: 'genre_tv_shows'
+
   resources :movies, only: [:index, :show]
   resources :tv_shows, only: [:index, :show]
-  devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
