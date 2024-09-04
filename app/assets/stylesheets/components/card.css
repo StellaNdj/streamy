@@ -8,6 +8,9 @@
 .movie-card {
   border-radius: 25px;
   max-width: 200px;
+  background-color: #00050d;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1;
 }
 
 
@@ -54,19 +57,22 @@
   border-bottom-right-radius: 10px;
 }
 
-.home-movie-card:hover {
+.home-movie-card:hover,
+.movie-card:hover {
   transform: scale(1.1);
   position: absolute;
 }
 
-.home-movie-card:hover .movie-card-infos {
+.home-movie-card:hover .movie-card-infos,
+.movie-card:hover .movie-card-infos {
   display: block;
   background-color: #00050d;
   position: relative;
   z-index: 2000 !important;
 }
 
-.home-movie-card > a > img:hover {
+.home-movie-card > a > img:hover,
+.movie-card > a > img:hover {
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
 }
