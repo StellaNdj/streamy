@@ -23,8 +23,8 @@
               <% end %>
               <div class='movie-card-infos'>
                 <h3><%= link_to tv_show.title, tv_show_path(tv_show) %></h3>
-                <button class='home-play-btn'><i class="fa fa-play"></i> Play</button>
-                <button class='home-icons-btn'><i class="fa fa-plus"></i></button>
+                <button class='index-play-btn'><i class="fa fa-play"></i> Play</button>
+                <button class='index-icons-btn'><i class="fa fa-plus"></i></button>
                 <% if tv_show.release_date? %>
                   <p class="home-year"><%= tv_show.release_date.strftime("%Y")%></p>
                 <% end %>

@@ -23,10 +23,34 @@
 
 .movie-card > h4 > a,
 .home-movie-card > h4 > a,
-.movie-card-infos > h4 > a,
+.home-movie-card-infos > h4 > a,
 .movie-card-infos > h3 > a {
   text-decoration: none;
   color: white;
+}
+
+.index-play-btn {
+  background-color: #393d43ed;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+  font-size: 18px;
+  border: none;
+  width: 100%;
+}
+
+.index-icons-btn {
+  background-color: #393d43ed;
+  padding: 5px;
+  color: white;
+  border-radius: 50%;
+  font-size: 18px;
+  border: none;
+  margin: 5px 0;
+}
+
+.movie-card-infos {
+  font-size: 14px;
 }
 
 /* Homepage cards */
@@ -57,13 +81,21 @@
   border-bottom-right-radius: 10px;
 }
 
+.home-movie-card-infos {
+  display: none;
+  transition: opacity 0.3s ease;
+  padding: 15px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
 .home-movie-card:hover,
 .movie-card:hover {
   transform: scale(1.1);
   position: absolute;
 }
 
-.home-movie-card:hover .movie-card-infos,
+.home-movie-card:hover .home-movie-card-infos,
 .movie-card:hover .movie-card-infos {
   display: block;
   background-color: #00050d;
@@ -78,7 +110,8 @@
 }
 
 
-.movie-card-infos p {
+.movie-card-infos p,
+.home-movie-card-infos p {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;

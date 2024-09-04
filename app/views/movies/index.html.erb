@@ -23,8 +23,8 @@
               <% end %>
               <div class='movie-card-infos'>
                 <h3><%= link_to movie.title, movie_path(movie) %></h3>
-                <button class='home-play-btn'><i class="fa fa-play"></i> Play</button>
-                <button class='home-icons-btn'><i class="fa fa-plus"></i></button>
+                <button class='index-play-btn'><i class="fa fa-play"></i> Play</button>
+                <button class='index-icons-btn'><i class="fa fa-plus"></i></button>
                 <p class='home-year'><%= movie.release_date.strftime("%Y")%></p>
                 <p><%= movie.overview %></p>
               </div>
