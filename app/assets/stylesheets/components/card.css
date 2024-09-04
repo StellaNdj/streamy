@@ -20,11 +20,11 @@
   border-radius: 10px;
 }
 
-.movie-card > h3 > a,
-.home-movie-card > h3 > a,
+
 .movie-card > h4 > a,
 .home-movie-card > h4 > a,
-.movie-card-infos > h4 > a {
+.movie-card-infos > h4 > a,
+.movie-card-infos > h3 > a {
   text-decoration: none;
   color: white;
 }
