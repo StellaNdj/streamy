@@ -26,10 +26,6 @@
   border: 5px solid black;
 }
 
-.user-logo:hover {
-  border: 5px solid white;
-  border-radius: 50%;
-}
 
 .nav-btn {
   border-radius: 10px;
@@ -64,6 +60,7 @@
 
 .nav-menu {
   display: none;
+  width: 120px;
   position: absolute;
   top: 100%;
   right: 0;
@@ -73,8 +70,13 @@
   border-radius: 15px;
 }
 
-.user-logo .nav-btn-menu {
+.user-login-container:hover .nav-menu {
   display: block;
+}
+
+.user-login-container:hover .user-logo {
+  border: 5px solid white;
+  border-radius: 50%;
 }
 
 .nav-btn-menu {
@@ -85,6 +87,9 @@
   margin: 5px;
   text-decoration: none;
   font-size: 13px;
+  box-sizing: border-box;
+  display: inline-block;
+  text-align: center;
 }
 
 .nav-menu p {
@@ -93,5 +98,11 @@
 }
 
 .nav-menu ul {
+  padding: 0;
+  margin: 0;
   list-style: none;
+}
+
+.nav-menu li {
+  width: 100%;
 }

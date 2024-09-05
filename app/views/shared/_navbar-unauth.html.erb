@@ -3,12 +3,14 @@
     <%= image_tag 'streamy-clear.png', alt: 'Streamy logo', class: 'logo' %>
   </div>
   <div class="navbar-login-search">
-    <%= image_tag 'unauth-user.png', alt: 'Unauth user logo', class: 'user-logo' %>
-  </div>
-  <div class='nav-menu'>
-    <p>YOUR ACCOUNT</p>
-    <ul>
-      <li><%= link_to 'Login', new_user_session_path, class: 'nav-btn-menu' %></li>
-    </ul>
+    <div class="user-login-container">
+      <%= image_tag 'user-test.png', alt: 'Unauth user logo', class: 'user-logo' %>
+      <div class='nav-menu'>
+        <p>YOUR ACCOUNT</p>
+        <ul>
+          <li><%= link_to 'Login', new_user_session_path, class: 'nav-btn-menu' %></li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
