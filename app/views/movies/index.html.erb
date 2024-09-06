@@ -11,7 +11,7 @@
     <%# Calculate z-index knowing that first container gets the highest z-index %>
     <% z_index = @movies_by_genre.size - index %>
 
-    <div class="swiper-container" data-controller="swiper" data-slides-per-view="6" style="position: relative; z-index: <%= z_index %>;">
+    <div class="swiper-container" data-controller="swiper" data-slides-per-view="4" style="position: relative; z-index: <%= z_index %>;">
       <div class="swiper-wrapper">
         <% movies.each do |movie| %>
           <div class='swiper-slide'>

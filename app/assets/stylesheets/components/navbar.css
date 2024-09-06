@@ -100,6 +100,7 @@
 
 .scrolled .user-logo {
   border-color: rgba(10, 41, 68, 0.8);
+  backdrop-filter: blur(10px);
 }
 
 .navbar.scrolled {
@@ -109,6 +110,7 @@
 
 .navbar.scrolled .navbar-icons i {
   background-color: rgba(10, 41, 68, 0.8);
+  backdrop-filter: blur(10px);
 }
 .navbar.scrolled .navbar-icons i:hover {
   background-color: white;
