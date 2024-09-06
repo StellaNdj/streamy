@@ -9,6 +9,8 @@
   align-items: center;
   justify-content: space-between;
   z-index: 5000;
+  background-color: #00050d;
+  transition: background-color 0.1s ease, backdrop-filter 0.1s ease;
 }
 
 .navbar-logo-nav {
@@ -25,6 +27,7 @@
   width: 30px;
   border: 5px solid black;
   border-radius: 50%;
+  transition: border-color 0.1s ease;
 }
 
 
@@ -52,6 +55,8 @@
 
 .navbar-login-search {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .navbar-login-search i {
@@ -72,11 +77,6 @@
   border-radius: 15px;
 }
 
-.user-login-container {
-  display: flex;
-  align-items: center;
-}
-
 .user-login-container:hover .nav-menu {
   display: block;
 }
@@ -84,6 +84,15 @@
 .user-login-container:hover .user-logo {
   border: 5px solid white;
   border-radius: 50%;
+}
+
+.scrolled .user-logo {
+  border-color: rgba(10, 41, 68, 0.8);
+}
+
+.navbar.scrolled {
+  background-color: rgba(10, 41, 68, 0.8);
+  backdrop-filter: blur(10px);
 }
 
 .nav-btn-menu {
