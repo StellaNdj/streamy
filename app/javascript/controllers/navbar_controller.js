@@ -2,9 +2,10 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="navbar"
 export default class extends Controller {
-  static targets = ['nav', 'navLogo'];
+  static targets = ['nav', 'navLogo', 'navIcon'];
   connect() {
     window.addEventListener('scroll', this.handleScroll.bind(this));
+    console.log()
   }
 
   disconnect() {

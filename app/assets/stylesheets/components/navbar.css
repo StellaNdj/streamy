@@ -28,6 +28,7 @@
   border: 5px solid black;
   border-radius: 50%;
   transition: border-color 0.1s ease;
+  margin: 0 10px;
 }
 
 
@@ -59,9 +60,20 @@
   align-items: center;
 }
 
-.navbar-login-search i {
-  font-size: 16px;
-  margin: 5px;
+.navbar-icons {
+  margin: 0 10px;
+}
+
+.navbar-icons i {
+  margin: 0 5px;
+  background-color: #00050d;
+  padding: 10px;
+  border-radius: 60%;
+}
+
+.navbar-icons i:hover {
+  background-color: white;
+  color: black;
 }
 
 .nav-menu {
@@ -93,6 +105,14 @@
 .navbar.scrolled {
   background-color: rgba(10, 41, 68, 0.8);
   backdrop-filter: blur(10px);
+}
+
+.navbar.scrolled .navbar-icons i {
+  background-color: rgba(10, 41, 68, 0.8);
+}
+.navbar.scrolled .navbar-icons i:hover {
+  background-color: white;
+  color: black;
 }
 
 .nav-btn-menu {
