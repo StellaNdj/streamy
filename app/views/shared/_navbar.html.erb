@@ -1,3 +1,4 @@
+<%# Navbar laptop %>
 <div class='navbar' data-controller="navbar" data-navbar-target="nav">
   <div class='navbar-logo-nav'>
     <%= link_to root_path do %>
@@ -14,7 +15,36 @@
       <i class='fa fa-bookmark nav-icon-book'></i>
     </div>
     <div class="user-login-container">
-      <%= image_tag 'user-test.png', alt: 'Unauth user logo', class: 'user-logo', data: {navbar_target: 'navLogo'} %>
+      <%= image_tag 'user-test.png', alt: 'User logo', class: 'user-logo', data: {navbar_target: 'navLogo'} %>
+      <div class='nav-menu'>
+        <p>YOUR ACCOUNT</p>
+        <ul>
+          <li><%= link_to 'Logout', destroy_user_session_path, data: {turbo_method: :delete}, class: 'nav-btn-menu' %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%# Mobile/Tablets %>
+
+<div class='mob-navbar' data-controller="navbar" data-navbar-target="nav">
+  <div class="mob-nav-menu">
+    <%= link_to 'Home', root_path, class: "nav-btn #{'active' if current_page?(root_path)}" %>
+    <%= link_to 'Movies', movies_path, class: "nav-btn #{'active' if current_page?(movies_path)}" %>
+    <%= link_to 'TV Shows', tv_shows_path, class: "nav-btn #{'active' if current_page?(tv_shows_path)}" %>
+  </div>
+  <div class='mob-navbar-logo-nav'>
+    <%= link_to root_path do %>
+      <%= image_tag 'streamy-clear.png', alt: 'Streamy logo', class: 'logo' %>
+    <% end %>
+  </div>
+  <div class="mob-navbar-login-search">
+    <div class="navbar-icons">
+      <i class="fa fa-magnifying-glass"></i>
+    </div>
+    <div class="user-login-container">
+      <%= image_tag 'user-test.png', alt: 'User logo', class: 'user-logo', data: {navbar_target: 'navLogo'} %>
       <div class='nav-menu'>
         <p>YOUR ACCOUNT</p>
         <ul>
