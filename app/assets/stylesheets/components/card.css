@@ -25,8 +25,13 @@
 .home-movie-card > h4 > a,
 .home-movie-card-infos > h4 > a,
 .movie-card-infos > h3 > a {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   text-decoration: none;
   color: white;
+  width: 100%;
+  display: block;
 }
 
 .index-play-btn {

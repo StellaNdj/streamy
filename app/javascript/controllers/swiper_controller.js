@@ -6,8 +6,8 @@ export default class extends Controller {
   initialize() {
     this.mediaQueries = [
       { query: "(max-width: 600px)", slidesPerView: 2 },
-      { query: "(min-width: 601px) and (max-width: 1024px)", slidesPerView: 4 },
-      { query: "(min-width: 1025px)", slidesPerView: 6 }
+      { query: "(min-width: 601px) and (max-width: 1000px)", slidesPerView: 4 },
+      { query: "(min-width: 1000px)", slidesPerView: 6 }
     ];
 
     this.swiper = null;
