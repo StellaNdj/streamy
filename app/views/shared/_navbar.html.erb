@@ -29,10 +29,15 @@
 <%# Mobile/Tablets %>
 
 <div class='mob-navbar' data-controller="navbar" data-navbar-target="nav">
-  <div class="mob-nav-menu">
-    <%= link_to 'Home', root_path, class: "nav-btn #{'active' if current_page?(root_path)}" %>
-    <%= link_to 'Movies', movies_path, class: "nav-btn #{'active' if current_page?(movies_path)}" %>
-    <%= link_to 'TV Shows', tv_shows_path, class: "nav-btn #{'active' if current_page?(tv_shows_path)}" %>
+  <div class="menu-container">
+    <button class="mob-menu-btn">Menu <i class="fa fa-angle-down"></i></button>
+    <div class="mob-nav-menu">
+      <ul>
+        <li><%= link_to 'Home', root_path, class: "nav-btn-menu #{'active' if current_page?(root_path)}" %></li>
+        <li><%= link_to 'Movies', movies_path, class: "nav-btn-menu #{'active' if current_page?(movies_path)}" %></li>
+        <li><%= link_to 'TV Shows', tv_shows_path, class: "nav-btn-menu #{'active' if current_page?(tv_shows_path)}" %></li>
+      </ul>
+    </div>
   </div>
   <div class='mob-navbar-logo-nav'>
     <%= link_to root_path do %>

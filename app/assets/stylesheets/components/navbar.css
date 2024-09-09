@@ -6,7 +6,6 @@
   top: 0;
   margin: 0 10px;
   padding: 2px 15px;
-  display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 5000;
@@ -14,9 +13,6 @@
   transition: background-color 0.1s ease, backdrop-filter 0.1s ease;
 }
 
-.mob-navbar {
-  display: none;
-}
 
 .navbar-logo-nav {
   display: flex;
@@ -37,7 +33,8 @@
 }
 
 
-.nav-btn {
+.nav-btn,
+.mob-menu-btn {
   border-radius: 10px;
   padding: 15px;
   color: white;
@@ -46,12 +43,19 @@
   font-size: 13px;
 }
 
+.mob-menu-btn {
+  border: none;
+  background-color: #00050d;
+}
+
+
 .active {
   background-color: rgb(30, 97, 154);
 }
 
 .nav-btn:hover,
-.nav-btn-menu:hover {
+.nav-btn-menu:hover,
+.mob-menu-btn:hover {
   background-color: rgb(45, 135, 213);
 }
 
@@ -82,7 +86,8 @@
   color: black;
 }
 
-.nav-menu {
+.nav-menu,
+.mob-nav-menu {
   display: none;
   width: 120px;
   margin: 20px 0;
@@ -94,6 +99,17 @@
   padding: 20px;
   border-radius: 15px;
 }
+
+
+.mob-nav-menu {
+  left: 0;
+}
+
+
+.menu-container:hover .mob-nav-menu {
+  display: block;
+}
+
 
 .user-login-container:hover .nav-menu {
   display: block;
@@ -136,17 +152,20 @@
   text-align: center;
 }
 
-.nav-menu p {
+.nav-menu p,
+.mob-nav-menu p {
   font-size: 14px;
   color: #999;
 }
 
-.nav-menu ul {
+.nav-menu ul,
+.mob-nav-menu ul {
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
-.nav-menu li {
+.nav-menu li,
+.mob-nav-menu li {
   width: 100%;
 }

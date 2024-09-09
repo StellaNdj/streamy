@@ -42,7 +42,7 @@
   .navbar {
     display: none;
   }
-  
+
   .mob-navbar {
     display: flex;
   }
@@ -80,6 +80,15 @@
 
 
 @media (min-width: 854px) and (max-width: 1200px) {
+
+  .navbar {
+    display: flex;
+  }
+
+  .mob-navbar {
+    display: none;
+  }
+
   .home-movie-card {
     max-width: 200px;
     margin: 0 10px;
@@ -90,4 +99,14 @@
     width: 200px;
   }
 
+}
+
+@media (min-width: 1000px) {
+  .navbar {
+    display: flex;
+  }
+
+  .mob-navbar {
+    display: none;
+  }
 }
