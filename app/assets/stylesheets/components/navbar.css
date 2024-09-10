@@ -13,6 +13,12 @@
   transition: background-color 0.1s ease, backdrop-filter 0.1s ease;
 }
 
+.mob-navbar {
+  width: 100%;
+  padding: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
 
 .navbar-logo-nav {
   display: flex;
@@ -103,6 +109,7 @@
 
 .mob-nav-menu {
   left: 0;
+  margin: 10px 0;
 }
 
 

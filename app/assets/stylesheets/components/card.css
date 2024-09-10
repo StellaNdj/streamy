@@ -96,6 +96,7 @@
 .movie-card:hover {
   transform: scale(1.1);
   position: absolute;
+  z-index: 2;
 }
 
 .home-movie-card:hover .home-movie-card-infos,
@@ -105,13 +106,6 @@
   position: relative;
   z-index: 2000;
 }
-
-.home-movie-card > a > img:hover,
-.movie-card > a > img:hover {
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-}
-
 
 .movie-card-infos p,
 .home-movie-card-infos p {
