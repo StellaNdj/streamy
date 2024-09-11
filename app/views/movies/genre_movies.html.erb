@@ -2,17 +2,17 @@
 <% if @movies.any? %>
   <div class='movies-grid'>
     <% @movies.each do |movie| %>
-      <div class='movie-card'>
+      <div class='movie-genre'>
         <% if movie.poster_path %>
           <%= link_to movie_path(movie) do %>
             <%= image_tag "https://image.tmdb.org/t/p/w500#{movie.poster_path}" %>
           <% end %>
         <% end %>
-        <div class='movie-card-infos'>
+        <div class='movie-genre-infos'>
           <h3><%= link_to movie.title, movie_path(movie) %></h3>
           <button class='index-play-btn'><i class="fa fa-play"></i> Play</button>
           <button class='index-icons-btn'><i class="fa fa-plus"></i></button>
-          <p class='home-year'><%= movie.release_date.strftime("%Y")%></p>
+          <p class='home-year'><%= movie.release_date.strftime("%Y") %></p>
           <p><%= movie.overview %></p>
         </div>
       </div>

@@ -16,7 +16,8 @@
     width: 150px;
   }
 
-  .movie-card {
+  .movie-card,
+  .movie-genre {
     max-width: 160px;
     margin: 0 10px;
   }
@@ -40,6 +41,11 @@
 
 
 @media (min-width: 480px) and (max-width: 854px) {
+
+  .movies-grid {
+    gap: 45px;
+  }
+
   .navbar {
     display: none;
   }
@@ -58,7 +64,8 @@
     width: 164px;
   }
 
-  .movie-card {
+  .movie-card,
+  .movie-genre {
     max-width: 160px;
     margin: 0 10px;
   }

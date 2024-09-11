@@ -3,6 +3,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  position: relative;
 }
 
 .movie-card {
@@ -20,11 +21,54 @@
   border-radius: 10px;
 }
 
+/* Genre style */
+
+.movie-genre {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.movie-genre img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.movie-genre-infos {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.movie-genre:hover img {
+  opacity: 0;
+}
+
+.movie-genre:hover .movie-genre-infos {
+  opacity: 1;
+}
 
 .movie-card > h4 > a,
 .home-movie-card > h4 > a,
 .home-movie-card-infos > h4 > a,
-.movie-card-infos > h3 > a {
+.movie-card-infos > h3 > a,
+.movie-genre-infos a {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -32,6 +76,10 @@
   color: white;
   width: 100%;
   display: block;
+}
+
+.movie-genre-infos a {
+  max-width: 150px;
 }
 
 .index-play-btn {
@@ -99,6 +147,7 @@
   z-index: 2;
 }
 
+
 .home-movie-card:hover .home-movie-card-infos,
 .movie-card:hover .movie-card-infos {
   display: block;
@@ -107,8 +156,20 @@
   z-index: 2000;
 }
 
+.movie-genre:hover .movie-genre > a > img {
+  display: none;
+}
+
+.movie-genre:hover .movie-card-infos {
+  display: block;
+  background-color: #00050d;
+  position: relative;
+  z-index: 2000;
+}
+
 .movie-card-infos p,
-.home-movie-card-infos p {
+.home-movie-card-infos p,
+.movie-genre-infos p {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
