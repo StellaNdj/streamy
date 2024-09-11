@@ -16,8 +16,7 @@
     width: 150px;
   }
 
-  .movie-card,
-  .movie-genre {
+  .movie-card {
     max-width: 160px;
     margin: 0 10px;
   }
@@ -25,6 +24,11 @@
   .movie-card > a > img {
     height: 200px;
     width: 155px;
+  }
+
+  .movie-genre {
+    width: 165px;
+    height: 230px;
   }
 
   .home-movie-card:hover .home-movie-card-infos,
@@ -64,10 +68,14 @@
     width: 164px;
   }
 
-  .movie-card,
-  .movie-genre {
+  .movie-card {
     max-width: 160px;
     margin: 0 10px;
+  }
+
+  .movie-genre {
+    width: 165px;
+    height: 230px;
   }
 
   .movie-card > a > img {
