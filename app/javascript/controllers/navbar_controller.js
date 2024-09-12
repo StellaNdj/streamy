@@ -5,7 +5,6 @@ export default class extends Controller {
   static targets = ['nav', 'navLogo', 'navIcon'];
   connect() {
     window.addEventListener('scroll', this.handleScroll.bind(this));
-    console.log()
   }
 
   disconnect() {

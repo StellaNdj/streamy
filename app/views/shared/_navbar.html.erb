@@ -8,11 +8,12 @@
     <%= link_to 'Movies', movies_path, class: "nav-btn #{'active' if current_page?(movies_path)}" %>
     <%= link_to 'TV Shows', tv_shows_path, class: "nav-btn #{'active' if current_page?(tv_shows_path)}" %>
   </div>
-  <div class="navbar-login-search">
+  <div class="navbar-login-search" data-controller="modal">
     <div class="navbar-icons">
-      <i class="fa fa-magnifying-glass"></i>
+      <i class="fa fa-magnifying-glass" data-modal-target="search"></i>
       <i class="fa fa-rectangle-list"></i>
       <i class='fa fa-bookmark nav-icon-book'></i>
+      <%= render 'shared/modal' %>
     </div>
     <div class="user-login-container">
       <%= image_tag 'user-test.png', alt: 'User logo', class: 'user-logo', data: {navbar_target: 'navLogo'} %>
