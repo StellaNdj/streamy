@@ -3,6 +3,10 @@ Rails.application.routes.draw do
 
   root 'pages#home'
 
+  # Search routes
+  get 'search', to: 'search#index'
+  get 'search/all', to: 'search#show_all'
+
   # Other routes
   get 'movies/genre/:genre', to: 'movies#genre_movies', as: 'genre_movies'
   get 'tv_shows/genre/:genre', to: 'tv_shows#genre_tv_shows', as: 'genre_tv_shows'

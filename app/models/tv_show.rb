@@ -9,4 +9,8 @@ class TvShow < ApplicationRecord
     s3_client = Aws::S3::Client.new(region: ENV['REGION_CODE'])
     s3_client.presigned_url(:get_object, bucket: ENV['BUCKET_NAME'], key: self.video_key, expires_in: 3000)
   end
+
+  def self.search(query)
+    where('title ILIKE ?', "%#{query}")
+  end
 end

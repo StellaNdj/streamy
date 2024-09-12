@@ -1,0 +1,17 @@
+<h2>Search Results for "<%= params[:query] %>"</h2>
+
+<div>
+  <h2>Movies</h2>
+  <ul>
+    <% @movies.each do |movie| %>
+      <li><%= movie.title %></li>
+    <% end %>
+  </ul>
+
+  <h2>TV Shows</h2>
+  <ul>
+    <% @tv_shows.each do |tv_show| %>
+      <li><%= tv_show.title %></li>
+    <% end %>
+  </ul>
+</div>

@@ -1,5 +1,8 @@
-<div class="modal-overlay" data-modal-target="modalDiv">
+<div class="modal-overlay" data-modal-target="modalDiv" data-controller='search'>
   <div class="modal-content">
-    <input type="text" placeholder=" Search">
+    <%= form_with url: search_path, method: :get, local: true do %>
+      <%= text_field_tag :query, nil, placeholder: "Search", data: { action: "input->search#search", search_target: "input" } %>
+    <% end %>
+    <div id="search-results" data-search-target="results"></div>
   </div>
 </div>
